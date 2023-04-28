@@ -4,7 +4,7 @@ import numpy as np
 import tensorflow as tf
 
 app = Flask(__name__)
-model = tf.keras.models.load_model('image_classification_model.h5')
+model = tf.keras.models.load_model('..\Image Classification Model Training and Predicting\saving_model\image_classification_model.h5')
 classes = ['airplane', 'automobile', 'bird', 'cat', 'deer', 'dog', 'frog', 'horse', 'ship', 'truck']
 
 @app.route("/")
