@@ -8,7 +8,7 @@ classes = ['airplane', 'automobile', 'bird', 'cat', 'deer', 'dog', 'frog', 'hors
 
 # Making an array containing 5 models
 model = []
-for i in range(5):
+for i in range(10):
     model_name = "..\Image Classification Model Training and Predicting\saving_model\model"+str(i+1)+".h5"
     model.append(tf.keras.models.load_model(model_name))
 
@@ -28,7 +28,7 @@ def predict():
     pred_class = []
     pred_prob = []
 
-    for i in range(5):
+    for i in range(len(model)):
         pred.append(model[i].predict(img))
         pred_class.append(classes[np.argmax(pred[i])])
         pred_prob.append(float(np.max(pred[i])))

@@ -67,7 +67,7 @@ for i in range(10):
     print('Test accuracy:', test_acc)
     
     #Saving the model
-    x='image_classification_model_'+str(i+1)+'.h5'
+    x='\model'+str(i+1)+'.h5'
     path=os.path.join('Minor Project\Image Classification Model Training and Predicting\saving_model',x)
     model.save(path)
 # >>>>>>> 9bc7a4aafbe0c292010ca28cb81e2471296f8772
