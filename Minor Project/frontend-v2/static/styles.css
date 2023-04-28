@@ -98,3 +98,8 @@ font-family: "Montserrat";
 .prediction-heading{
     margin-bottom: 40px;
 }
+
+/* Loading Animation*/
+#loading{
+    display: none;
+}
