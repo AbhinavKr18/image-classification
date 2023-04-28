@@ -5,7 +5,7 @@ from keras.datasets import cifar10
 
 # Making 5 .h5 models to better improve accuracy of models
 
-for i in range(6,11):
+for i in range(5,11):
 
     # idhar apan CIFAR-10 Data ko load krre
     (train_images, train_labels), (test_images, test_labels) = cifar10.load_data()
