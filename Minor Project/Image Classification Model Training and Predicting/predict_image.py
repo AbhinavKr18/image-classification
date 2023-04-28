@@ -1,12 +1,11 @@
-#New one
 import tensorflow as tf
 from tensorflow import keras
 import numpy as np
 from PIL import Image
 #loading the 10 models saved
 models = []
-for i in range(10):
-    model_path = f'Minor Project\Image Classification Model Training and Predicting\saving_model\image_classification_model_{i}.h5'
+for i in range(9):
+    model_path = f'Minor Project\Image Classification Model Training and Predicting\saving_model\image_classification_model_{i+1}.h5'
     model = keras.models.load_model(model_path)
     models.append(model)
 #loading the desired image

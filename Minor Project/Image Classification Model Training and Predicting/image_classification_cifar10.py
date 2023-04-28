@@ -2,9 +2,12 @@ import tensorflow as tf
 from tensorflow import keras
 from tensorflow.keras import layers, models
 from keras.datasets import cifar10
-# idhar apan CIFAR-10 Data ko load krre
+import os
+
+# Here we are loading CIFAR-10 Dataset
 (train_images, train_labels), (test_images, test_labels) = cifar10.load_data()
-# Data ko preprocess krlete hai 
+
+# Now we are preprocessing Data
 train_images = train_images / 255.0
 test_images = test_images / 255.0
 
@@ -19,15 +22,21 @@ for i in range(10):
     model.add(layers.Flatten())
     model.add(layers.Dense(64, activation='relu'))
     model.add(layers.Dense(10))
+    
     #Compiling the model
     model.compile(optimizer='adam',
                 loss=tf.keras.losses.SparseCategoricalCrossentropy(from_logits=True),
                 metrics=['accuracy'])
+    
     #Training the model
-    history = model.fit(train_images, train_labels, epochs=10, 
+    history = model.fit(train_images, train_labels, epochs=15, 
                         validation_data=(test_images, test_labels))
+    
     #Evaluating the modellll
     test_loss, test_acc = model.evaluate(test_images, test_labels)
     print('Test accuracy:', test_acc)
+    
     #Saving the model
-    model.save('Minor Project\Image Classification Model Training and Predicting\saving_model\image_classification_model_{i}.h5')
+    x='image_classification_model_'+str(i+1)+'.h5'
+    path=os.path.join('Minor Project\Image Classification Model Training and Predicting\saving_model',x)
+    model.save(path)
