@@ -23,7 +23,7 @@ model.compile(optimizer='adam',
               metrics=['accuracy']) #Compiling the model
 
 #Keeping the batch size as 64
-history = model.fit(train_images, train_labels, epochs=1, batch_size=64 ,validation_data=(test_images, test_labels)) #Training the model
+history = model.fit(train_images, train_labels, epochs=25, batch_size=64 ,validation_data=(test_images, test_labels)) #Training the model
 
 #Evaluating the modellll
 test_loss, test_acc = model.evaluate(test_images, test_labels)
