@@ -24,7 +24,7 @@ form.addEventListener('submit', async (event) => {
     setTimeout(() => {
       document.getElementById('loading').style.display = 'none';
       predictionContainer.innerHTML = `<p>Prediction: ${prediction.class}</p>`;
-    }, 10);
+    }, 600);
 
   } catch (error) {
     // Display an error message if something went wrong
