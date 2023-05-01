@@ -67,18 +67,21 @@ font-family: "Montserrat";
 
 /* Testimonial Section */
 #testimonials {
-    background-color: #ef8172;
+    background-color: #111;
+    color: #fff
 }
   
 .testimonial-text {
     font-size: 3rem;
     line-height: 1.5;
+    color: #fff
 }
 .testimonial-image {
     width: 400px;
     height: 200px;
     border-radius: 5%;
     margin: 20px;
+    color: #fff
 }
 
 /* Copied from the chatgpt version (Newfolder) */
